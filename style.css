@@ -1,145 +1,86 @@
-/* latin */
-@font-face {
-    font-family: 'Fascinate Inline';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Fascinate Inline'), local('FascinateInline-Regular'), url(font/jVyR7mzzB3zc-jp6QCAu60poNqIy5grIfA.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #545454;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+}
 
 .container{
-    width: 450px;
-    height: 450px;
-    display: block;
-    margin: 25px auto;
-    position: relative;
+    background: #14BDAC;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
 }
-
-#cvs{
-    position: absolute;
-    border: 1px solid #000;
-}
-
-.options{
-    position: absolute;
-    width: 450px;
-    height: 450px;
-}
-
-.options h1{
+.title{
     text-align: center;
-    font-size: 65px;
-    font-family: 'Fascinate Inline', cursive;
-    color: #f00;
-    margin: 30px 0 20px 0;
+}
+.title span{
+    color: #F2EBD3;
+}
+.status-action{
+    display: flex;
+    margin-top: 25px;
+    font-size: 25px;
+    justify-content: space-around;
+    height: 30px;
 }
 
-.options h2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    font-weight: bold;
+.status span{
+    color: #F2EBD3;
 }
 
-.options div{
-    display: inline-block;
-}
-
-.options .computer, .x{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 5px;
-    background-color: #FFF;
-    color: #000;
-    font-size: 1.5em;
-    border-radius: 5px;
-    margin-left: 70px;
-    width: 150px;
-    text-align: center;
+.choice_button{
     cursor: pointer;
-    border: 1px solid #000;
 }
 
-.options .friend, .o{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 5px;
-    background-color: #FFF;
-    color: #000;
-    font-size: 1.5em;
-    border-radius: 5px;
-    margin-left: 10px;
-    width: 150px;
-    text-align: center;
+.reset{
+    cursor:pointer;
+}
+.reset:hover{
+    color: #F2EBD3;
+}
+
+.game-grid{
+    background: #0DA192;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+}
+
+.game-cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    border: 1px solid #000;
-}
-
-.options .friend:hover, .computer:hover, .x:hover, .o:hover{
-    background-color: #011627;
-    color: #FFF;
-}
-
-.options .play{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    width: 70px;
-    display: block;
-    margin: 25px auto;
-    border-radius: 5px;
-    border: 1px solid #011627;
-    text-align: center;
-    padding: 10px;
-    background-color: #011627;
-    color: #FFF;
-    cursor: pointer;
-    transition: 100ms width ease-in;
-}
-.options .play:hover{
-    width: 110px;
-}
-
-.active{
-    background-color: #011627 !important;
-    color: #FFF !important;
-}
-
-.hide{
-    display: none;
-}
-
-.gameover{
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    background-color: rgba(0, 0, 0, 0.95);
-}
-.gameover h1{
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Fascinate Inline', cursive;
-    color: #fff;
-    margin: 40px 0 20px 0;
-}
-
-.gameover .winner-img{
-    display: block;
-    margin: 20px auto;
-}
-
-.gameover .play{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    width: 150px;
-    display: block;
-    margin: 25px auto;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-    transition: 100ms width ease-in;
-}
-.gameover .play:hover{
+    height: 200px;
     width: 200px;
+    background: #14BDAC;
+}
+
+.x,
+.o{
+    cursor:default;
+}
+
+.x::after{
+    content: '×';
+    font-size: 200px;
+}
+
+.o::after{
+    content: '○';
+    color: #F2EBD3;
+    font-size: 225px;
+}
+
+.Won::after{
+    color:#BD022F;
 }

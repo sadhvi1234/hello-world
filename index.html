@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tic Tac Toe - JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Tic Tac Toe</title>
 </head>
 <body>
     <div class="container">
-        <canvas id="cvs" width="450" height="450"></canvas>
-        <div class="options">
-            <h1>Tic Tac Toe</h1>
-            
-            <h2>Play Versus</h2>
-            <div class="computer">COMPUTER</div>
-            <div class="friend">FRIEND</div>
-
-            <h2>Symbol</h2>
-            <div class="x">X</div>
-            <div class="o">O</div>
-
-            <div class="play">PLAY</div>
-        </div>
-        <div class="gameover hide"></div>
+       <h1 class="title">Tic <span>Tac</span> Toe</h1> 
+       <h2 class = "choice">Do you want to play against Computer or a Friend?</h2>
+       <div class="status-action">
+           <div class="status">× is next</div>
+           <div class="reset">Reset</div>
+           <div class="choice_button">Select player</div>
+       </div>
+       <div class="game-grid">
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+           <div class="game-cell"></div>
+       </div>
     </div>
-
-    <script src="options.js"></script>
-    <script src="app.js"></script>
+    <script src = "app.js"></script>
 </body>
 </html>
